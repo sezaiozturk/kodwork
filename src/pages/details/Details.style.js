@@ -43,5 +43,6 @@ export default StyleSheet.create({
     foot: {
         flexDirection: 'row',
         justifyContent: 'space-evenly',
+        marginHorizontal: 10
     }
 })

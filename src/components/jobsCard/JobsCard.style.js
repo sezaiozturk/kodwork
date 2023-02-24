@@ -22,7 +22,7 @@ export default StyleSheet.create({
         borderRadius: 15,
         backgroundColor: '#EB455F',
         padding: 6,
-        alignSelf: 'baseline',
+        alignSelf: 'baseline'
 
     },
     location: {

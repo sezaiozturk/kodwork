@@ -33,8 +33,8 @@ const Details = ({ route }) => {
                 </View>
             </ScrollView>
             <View style={styles.foot}>
-                <Button title="Submit" />
-                <Button title="Favorite Job" />
+                <Button title="Submit" visibility={true} />
+                <Button title="Favorite Job" visibility={true} />
             </View>
         </View>
     )
