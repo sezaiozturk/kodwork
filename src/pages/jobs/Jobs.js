@@ -9,13 +9,12 @@ const Jobs = ({ navigation }) => {
     const { data, load, error, fetch } = useFetch();
 
     useEffect(() => {
-        fetch('https://www.themuse.com/api/public/jobs?page=1');
+        fetch(Config.API_URL);
     }, []);
     const renderItem = ({ item }) => <JobsCard jobs={item} navigation={navigation} />
 
     return (
         <View>
-            <Text>{Config.API_URL}</Text>
             <FlatList data={data} renderItem={renderItem} />
         </View>
     )
