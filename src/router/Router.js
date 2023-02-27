@@ -5,6 +5,8 @@ import details from "../pages/details";
 import jobs from "../pages/jobs";
 import favorites from '../pages/favorites'
 import { createStackNavigator } from "@react-navigation/stack";
+import { Provider } from "react-redux";
+import { store } from '../context/store'
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -23,11 +25,13 @@ export default Router = () => {
     )
   }
   return (
-    <NavigationContainer>
-      <Drawer.Navigator>
-        <Drawer.Screen name="jobsScreen" component={JobsStackScreens} options={{ headerShown: false }} />
-        <Drawer.Screen name="favoritesScreen" component={favorites} />
-      </Drawer.Navigator>
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer>
+        <Drawer.Navigator>
+          <Drawer.Screen name="jobsStack" component={JobsStackScreens} options={{ headerShown: false }} />
+          <Drawer.Screen name="favoritesScreen" component={favorites} />
+        </Drawer.Navigator>
+      </NavigationContainer>
+    </Provider>
   )
 }
